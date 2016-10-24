@@ -1,0 +1,10 @@
+- hosts: group1
+  sudo: yes
+  vars_prompt:
+    - name: remote_user
+      prompt: Remote user to to remove SSH access from on Remote Server
+    - name: developers_key
+      prompt: New developers public key
+  tasks:
+    - name: Add developer SSH access to group of servers
+      authorized_key: user="{{ remote_user }}" key="{{ developers_key }}" exclusive=no state=present
