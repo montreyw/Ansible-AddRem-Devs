@@ -2,7 +2,7 @@
   sudo: yes
   vars_prompt:
     - name: remote_user
-      prompt: Remote user to to remove SSH access from on Remote Server
+      prompt: Remote user to to add SSH access to on Remote Server. Ex root
     - name: developers_key
       prompt: New developers public key
   tasks:
